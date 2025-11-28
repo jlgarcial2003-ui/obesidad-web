@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,151 +9,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        /* General */
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Header */
-        header {
-            background-color: #66bb6a;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        <!-- Header antiguo eliminado -->
-
-<!-- Banner de revista -->
-<section id="banner" style="position: relative; width: 100%; height: 400px; background: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat; display: flex; align-items: center; justify-content: center; color: white;">
-    <div style="text-align: center; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px;">
-        <h1 style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 15px;">Revista de Salud</h1>
-        <p style="font-size: 20px; margin-bottom: 20px;">Todo sobre obesidad y bienestar, para una vida más saludable</p>
-        <a href="#inicio" style="background-color: #66bb6a; padding: 12px 25px; border-radius: 8px; color: white; font-weight: bold; font-size: 16px;">Descubre más</a>
-    </div>
-</section>
-
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #43a047;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 15px 0;
-            z-index: 100;
-        }
-        nav a {
-            color: white;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        nav a:hover {
-            background-color: #2e7d32;
-        }
-
-        /* Sections */
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.08);
-        }
-        section img {
-            width: 100%;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-        h2 {
-            color: #2e7d32;
-            margin-bottom: 15px;
-        }
-
-        /* Cards */
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .card {
-            background-color: #e8f5e9;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-        }
-
-        /* Buttons */
-        button {
-            background-color: #66bb6a;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background-color: #43a047;
-        }
-
-        /* Forms */
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #43a047;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        /* Responsive */
-        @media(max-width: 600px){
-            nav {
-                flex-direction: column;
-            }
-        }
+        body { margin:0; font-family:'Roboto',sans-serif; background:#f9f9f9; color:#333; line-height:1.6; }
+        h1,h2,h3 { font-family:'Playfair Display',serif; }
+        a { text-decoration:none; color:inherit; }
+        #banner { position:relative; width:100%; height:400px; background:url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat; display:flex; align-items:center; justify-content:center; color:white; }
+        #banner div { text-align:center; background:rgba(0,0,0,0.4); padding:20px; border-radius:10px; }
+        #banner h1 { font-size:48px; margin-bottom:15px; }
+        #banner p { font-size:20px; margin-bottom:20px; }
+        #banner a { background:#66bb6a; padding:12px 25px; border-radius:8px; color:white; font-weight:bold; font-size:16px; transition:background 0.3s; }
+        #banner a:hover { background:#43a047; }
+        nav { position:sticky; top:0; background:#43a047; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:15px 0; z-index:100; }
+        nav a { color:white; font-weight:bold; padding:8px 15px; border-radius:5px; transition:background 0.3s; }
+        nav a:hover { background:#2e7d32; }
+        section { max-width:1000px; margin:40px auto; background:white; padding:30px; border-radius:12px; box-shadow:0 0 12px rgba(0,0,0,0.08); }
+        section img { width:100%; border-radius:12px; margin:20px 0; }
+        h2 { color:#2e7d32; margin-bottom:15px; }
+        .card-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:20px; }
+        .card { background:#e8f5e9; padding:20px; border-radius:10px; transition:transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.2); }
+        button { background:#66bb6a; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-size:16px; transition:background 0.3s; }
+        button:hover { background:#43a047; }
+        input,textarea { width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-size:16px; }
+        footer { background:#43a047; color:white; text-align:center; padding:20px; margin-top:40px; }
+        @media(max-width:600px){ nav{flex-direction:column;} #banner h1{font-size:32px;} #banner p{font-size:16px;} }
     </style>
 </head>
 <body>
 
-<header>
-    Revista de Salud - Obesidad y Bienestar
-</header>
+<!-- Banner -->
+<section id="banner">
+    <div>
+        <h1>Revista de Salud</h1>
+        <p>Todo sobre obesidad y bienestar, para una vida más saludable</p>
+        <a href="#inicio">Descubre más</a>
+    </div>
+    <!-- AD 1: Banner superior -->
+    <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); width:728px; max-width:90%; text-align:center;">
+        <!-- REEMPLAZA CON TU CÓDIGO DE ADSENSE -->
+        <!-- AD CODE -->
+    </div>
+</section>
 
+<!-- Navigation -->
 <nav>
     <a href="#inicio">Inicio</a>
     <a href="#quees">¿Qué es?</a>
@@ -166,134 +62,76 @@
     <a href="#privacidad">Política de Privacidad</a>
 </nav>
 
+<!-- Inicio -->
 <section id="inicio">
     <h2>Bienvenido a tu revista de salud</h2>
-    <p>Descubre información confiable y actualizada sobre la obesidad, sus causas, consecuencias y cómo mejorar tu bienestar día a día.</p>
-    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1200&q=80" alt="Salud y bienestar">
+    <p>En este portal encontrarás información profunda y confiable sobre la obesidad...</p>
+    <div class="card-container">
+        <div class="card"><h3>Consejos de Nutrición</h3><p>Aprende a equilibrar tus comidas...</p></div>
+        <div class="card"><h3>Historias de Éxito</h3><p>Conoce experiencias reales...</p></div>
+        <div class="card"><h3>Investigación Reciente</h3><p>Descubre estudios y avances médicos...</p></div>
+    </div>
 </section>
 
+<!-- ¿Qué es la obesidad? -->
 <section id="quees">
     <h2>¿Qué es la obesidad?</h2>
-    <p>La obesidad es una enfermedad crónica caracterizada por la acumulación excesiva de grasa corporal, lo que aumenta el riesgo de padecer numerosas complicaciones de salud. Se calcula a menudo mediante el IMC (Índice de Masa Corporal).</p>
+    <p>La obesidad es una enfermedad crónica caracterizada por acumulación excesiva de grasa corporal...</p>
     <div class="card-container">
-        <div class="card">
-            <h3>Clasificación del IMC</h3>
-            <p>IMC ≥ 30: Obesidad</p>
-            <p>IMC 25-29.9: Sobrepeso</p>
-            <p>IMC < 25: Normal</p>
-        </div>
-        <div class="card">
-            <h3>Tipos de obesidad</h3>
-            <p>Abdominal, periférica, generalizada. Cada tipo puede tener distintos riesgos para la salud.</p>
-        </div>
-        <div class="card">
-            <h3>Factores de riesgo</h3>
-            <p>Genética, alimentación, sedentarismo, factores hormonales y psicológicos.</p>
-        </div>
+        <div class="card"><h3>Tipos de obesidad</h3><p>Abdominal, periférica, generalizada y obesidad infantil...</p></div>
+        <div class="card"><h3>Factores de riesgo</h3><p>Genética, metabolismo, hábitos alimenticios, sedentarismo...</p></div>
+        <div class="card"><h3>Estadísticas globales</h3><p>Más de 650 millones de adultos en el mundo padecen obesidad...</p></div>
     </div>
 </section>
 
+<!-- Causas -->
 <section id="causas">
     <h2>Causas de la obesidad</h2>
-    <p>La obesidad es el resultado de múltiples factores que interactúan entre sí:</p>
     <div class="card-container">
-        <div class="card">
-            <h3>Alimentación</h3>
-            <p>Exceso de calorías, comida rápida y procesada, azúcares y grasas saturadas.</p>
-        </div>
-        <div class="card">
-            <h3>Estilo de vida</h3>
-            <p>Sedentarismo, poco ejercicio, vida urbana y estrés.</p>
-        </div>
-        <div class="card">
-            <h3>Genética y metabolismo</h3>
-            <p>Algunos genes influyen en la forma en que se almacena la grasa o se quema energía.</p>
-        </div>
-        <div class="card">
-            <h3>Factores emocionales</h3>
-            <p>Estrés, ansiedad y depresión pueden aumentar la ingesta calórica.</p>
-        </div>
+        <div class="card"><h3>Alimentación</h3><p>Exceso de calorías y ultraprocesados...</p></div>
+        <div class="card"><h3>Estilo de vida</h3><p>Sedentarismo y hábitos urbanos...</p></div>
+        <div class="card"><h3>Genética</h3><p>Predisposición hereditaria y metabolismo...</p></div>
+        <div class="card"><h3>Factores psicológicos</h3><p>Estrés y ansiedad pueden incrementar apetito...</p></div>
+    </div>
+    <!-- AD 2: Entre secciones -->
+    <div style="text-align:center; margin:30px 0;">
+        <!-- REEMPLAZA CON TU CÓDIGO DE ADSENSE -->
+        <!-- AD CODE -->
     </div>
 </section>
 
+<!-- Consecuencias -->
 <section id="consecuencias">
     <h2>Consecuencias para la salud</h2>
     <div class="card-container">
-        <div class="card">
-            <h3>Cardiovasculares</h3>
-            <p>Hipertensión, infartos y arteriosclerosis.</p>
-        </div>
-        <div class="card">
-            <h3>Metabólicas</h3>
-            <p>Diabetes tipo 2, resistencia a la insulina y hígado graso.</p>
-        </div>
-        <div class="card">
-            <h3>Respiratorias</h3>
-            <p>Apnea del sueño, dificultad respiratoria y fatiga crónica.</p>
-        </div>
-        <div class="card">
-            <h3>Salud mental</h3>
-            <p>Ansiedad, depresión y baja autoestima.</p>
-        </div>
-        <div class="card">
-            <h3>Otras complicaciones</h3>
-            <p>Problemas articulares, mayor riesgo de ciertos tipos de cáncer.</p>
-        </div>
+        <div class="card"><h3>Cardiovasculares</h3><p>Hipertensión, infartos...</p></div>
+        <div class="card"><h3>Metabólicas</h3><p>Diabetes tipo 2...</p></div>
+        <div class="card"><h3>Respiratorias</h3><p>Apnea del sueño...</p></div>
     </div>
 </section>
 
+<!-- Prevención -->
 <section id="prevencion">
     <h2>Prevención</h2>
-    <p>La obesidad puede prevenirse con cambios sostenibles en el estilo de vida:</p>
     <div class="card-container">
-        <div class="card">
-            <h3>Alimentación saludable</h3>
-            <p>Frutas, verduras, proteínas magras y control de porciones.</p>
-        </div>
-        <div class="card">
-            <h3>Ejercicio regular</h3>
-            <p>Al menos 150 minutos de actividad moderada por semana.</p>
-        </div>
-        <div class="card">
-            <h3>Dormir bien</h3>
-            <p>Entre 7-9 horas de sueño, fundamental para metabolismo y hormonas.</p>
-        </div>
-        <div class="card">
-            <h3>Control del estrés</h3>
-            <p>Técnicas de relajación, meditación y mindfulness.</p>
-        </div>
+        <div class="card"><h3>Alimentación saludable</h3><p>Frutas, verduras, proteínas magras...</p></div>
+        <div class="card"><h3>Ejercicio regular</h3><p>Al menos 150 minutos semanales...</p></div>
     </div>
 </section>
 
+<!-- Tratamientos -->
 <section id="tratamientos">
     <h2>Tratamientos</h2>
     <div class="card-container">
-        <div class="card">
-            <h3>Plan nutricional</h3>
-            <p>Dieta personalizada supervisada por nutricionista.</p>
-        </div>
-        <div class="card">
-            <h3>Ejercicio supervisado</h3>
-            <p>Rutinas diseñadas según condición física y objetivos.</p>
-        </div>
-        <div class="card">
-            <h3>Terapia psicológica</h3>
-            <p>Apoyo emocional y técnicas de control de ansiedad y estrés.</p>
-        </div>
-        <div class="card">
-            <h3>Tratamiento médico</h3>
-            <p>Medicamentos específicos bajo prescripción profesional.</p>
-        </div>
-        <div class="card">
-            <h3>Cirugía bariátrica</h3>
-            <p>Opción para casos severos bajo estricta supervisión médica.</p>
-        </div>
+        <div class="card"><h3>Dieta personalizada</h3><p>Plan nutricional supervisado...</p></div>
+        <div class="card"><h3>Ejercicio supervisado</h3><p>Rutinas adaptadas...</p></div>
+        <div class="card"><h3>Terapia psicológica</h3><p>Apoyo emocional y control de hábitos...</p></div>
     </div>
 </section>
 
+<!-- Contacto -->
 <section id="contacto">
     <h2>Contacto</h2>
-    <p>Si deseas comunicarte con nosotros, completa el formulario:</p>
     <form>
         <label>Nombre:</label>
         <input type="text" placeholder="Tu nombre" required>
@@ -305,14 +143,17 @@
     </form>
 </section>
 
+<!-- Política de Privacidad -->
 <section id="privacidad">
     <h2>Política de Privacidad</h2>
-    <p>Esta web recopila datos solo cuando el usuario envía el formulario. No compartimos información con terceros y usamos cookies solo con fines estadísticos.</p>
+    <p>Esta web recopila datos solo cuando el usuario envía el formulario...</p>
 </section>
 
+<!-- Footer -->
 <footer>
     © 2025 Revista de Salud — Información confiable sobre obesidad y bienestar
 </footer>
 
 </body>
 </html>
+
