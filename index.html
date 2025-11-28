@@ -4,102 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obesidad y Salud</title>
+    <title>Revista de Salud - Obesidad y Bienestar</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
+        /* General */
         body {
-            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            padding: 0;
-            background: #f5f7fa;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
+        /* Header */
         header {
-            background: #0077cc;
+            background-color: #66bb6a;
             color: white;
-            padding: 20px 0;
+            padding: 30px 20px;
             text-align: center;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
         }
 
-        nav {
-            background: #005fa3;
-            padding: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+        <!-- Header antiguo eliminado -->
 
+<!-- Banner de revista -->
+<section id="banner" style="position: relative; width: 100%; height: 400px; background: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat; display: flex; align-items: center; justify-content: center; color: white;">
+    <div style="text-align: center; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px;">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 15px;">Revista de Salud</h1>
+        <p style="font-size: 20px; margin-bottom: 20px;">Todo sobre obesidad y bienestar, para una vida más saludable</p>
+        <a href="#inicio" style="background-color: #66bb6a; padding: 12px 25px; border-radius: 8px; color: white; font-weight: bold; font-size: 16px;">Descubre más</a>
+    </div>
+</section>
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #43a047;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px 0;
+            z-index: 100;
+        }
         nav a {
             color: white;
-            text-decoration: none;
             font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
-
         nav a:hover {
-            text-decoration: underline;
+            background-color: #2e7d32;
         }
 
+        /* Sections */
         section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             background: white;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.08);
         }
-
-        h2 {
-            color: #005fa3;
-            border-left: 5px solid #0077cc;
-            padding-left: 10px;
-        }
-
-        img {
+        section img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 12px;
             margin: 20px 0;
         }
-
-        footer {
-            background: #0077cc;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 15px;
         }
 
+        /* Cards */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Buttons */
+        button {
+            background-color: #66bb6a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #43a047;
+        }
+
+        /* Forms */
         input, textarea {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 8px;
-        }
-
-        button {
-            background: #0077cc;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
             font-size: 16px;
         }
 
-        button:hover {
-            background: #005fa3;
+        /* Footer */
+        footer {
+            background-color: #43a047;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media(max-width: 600px){
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    Obesidad y Salud
+    Revista de Salud - Obesidad y Bienestar
 </header>
 
 <nav>
@@ -111,103 +164,154 @@
     <a href="#tratamientos">Tratamientos</a>
     <a href="#contacto">Contacto</a>
     <a href="#privacidad">Política de Privacidad</a>
-    <a href="#terminos">Términos y Condiciones</a>
-    <a href="#legal">Aviso Legal</a>
 </nav>
 
 <section id="inicio">
-    <h2>Inicio</h2>
-    <p>
-        Bienvenido a este sitio dedicado a informar sobre la obesidad, sus causas, 
-        consecuencias y las maneras más eficaces de prevenirla y tratarla.
-    </p>
+    <h2>Bienvenido a tu revista de salud</h2>
+    <p>Descubre información confiable y actualizada sobre la obesidad, sus causas, consecuencias y cómo mejorar tu bienestar día a día.</p>
+    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1200&q=80" alt="Salud y bienestar">
 </section>
 
 <section id="quees">
     <h2>¿Qué es la obesidad?</h2>
-    <p>
-        La obesidad es una condición médica caracterizada por un exceso de grasa corporal 
-        que puede afectar negativamente la salud.
-    </p>
+    <p>La obesidad es una enfermedad crónica caracterizada por la acumulación excesiva de grasa corporal, lo que aumenta el riesgo de padecer numerosas complicaciones de salud. Se calcula a menudo mediante el IMC (Índice de Masa Corporal).</p>
+    <div class="card-container">
+        <div class="card">
+            <h3>Clasificación del IMC</h3>
+            <p>IMC ≥ 30: Obesidad</p>
+            <p>IMC 25-29.9: Sobrepeso</p>
+            <p>IMC < 25: Normal</p>
+        </div>
+        <div class="card">
+            <h3>Tipos de obesidad</h3>
+            <p>Abdominal, periférica, generalizada. Cada tipo puede tener distintos riesgos para la salud.</p>
+        </div>
+        <div class="card">
+            <h3>Factores de riesgo</h3>
+            <p>Genética, alimentación, sedentarismo, factores hormonales y psicológicos.</p>
+        </div>
+    </div>
 </section>
 
 <section id="causas">
     <h2>Causas de la obesidad</h2>
-    <ul>
-        <li><strong>Factores alimenticios:</strong> exceso de calorías, comida ultraprocesada.</li>
-        <li><strong>Estilo de vida:</strong> sedentarismo.</li>
-        <li><strong>Genética:</strong> metabolismo, herencia.</li>
-        <li><strong>Factores emocionales:</strong> estrés, ansiedad.</li>
-    </ul>
+    <p>La obesidad es el resultado de múltiples factores que interactúan entre sí:</p>
+    <div class="card-container">
+        <div class="card">
+            <h3>Alimentación</h3>
+            <p>Exceso de calorías, comida rápida y procesada, azúcares y grasas saturadas.</p>
+        </div>
+        <div class="card">
+            <h3>Estilo de vida</h3>
+            <p>Sedentarismo, poco ejercicio, vida urbana y estrés.</p>
+        </div>
+        <div class="card">
+            <h3>Genética y metabolismo</h3>
+            <p>Algunos genes influyen en la forma en que se almacena la grasa o se quema energía.</p>
+        </div>
+        <div class="card">
+            <h3>Factores emocionales</h3>
+            <p>Estrés, ansiedad y depresión pueden aumentar la ingesta calórica.</p>
+        </div>
+    </div>
 </section>
 
 <section id="consecuencias">
     <h2>Consecuencias para la salud</h2>
-    <ul>
-        <li>Enfermedades cardiovasculares.</li>
-        <li>Diabetes tipo 2.</li>
-        <li>Apnea del sueño.</li>
-        <li>Problemas articulares.</li>
-        <li>Depresión y ansiedad.</li>
-        <li>Mayor riesgo de cáncer.</li>
-    </ul>
+    <div class="card-container">
+        <div class="card">
+            <h3>Cardiovasculares</h3>
+            <p>Hipertensión, infartos y arteriosclerosis.</p>
+        </div>
+        <div class="card">
+            <h3>Metabólicas</h3>
+            <p>Diabetes tipo 2, resistencia a la insulina y hígado graso.</p>
+        </div>
+        <div class="card">
+            <h3>Respiratorias</h3>
+            <p>Apnea del sueño, dificultad respiratoria y fatiga crónica.</p>
+        </div>
+        <div class="card">
+            <h3>Salud mental</h3>
+            <p>Ansiedad, depresión y baja autoestima.</p>
+        </div>
+        <div class="card">
+            <h3>Otras complicaciones</h3>
+            <p>Problemas articulares, mayor riesgo de ciertos tipos de cáncer.</p>
+        </div>
+    </div>
 </section>
 
 <section id="prevencion">
     <h2>Prevención</h2>
-    <ul>
-        <li>Alimentación equilibrada</li>
-        <li>Ejercicio regular</li>
-        <li>Dormir bien</li>
-        <li>Control del estrés</li>
-        <li>Evitar exceso de azúcar</li>
-    </ul>
+    <p>La obesidad puede prevenirse con cambios sostenibles en el estilo de vida:</p>
+    <div class="card-container">
+        <div class="card">
+            <h3>Alimentación saludable</h3>
+            <p>Frutas, verduras, proteínas magras y control de porciones.</p>
+        </div>
+        <div class="card">
+            <h3>Ejercicio regular</h3>
+            <p>Al menos 150 minutos de actividad moderada por semana.</p>
+        </div>
+        <div class="card">
+            <h3>Dormir bien</h3>
+            <p>Entre 7-9 horas de sueño, fundamental para metabolismo y hormonas.</p>
+        </div>
+        <div class="card">
+            <h3>Control del estrés</h3>
+            <p>Técnicas de relajación, meditación y mindfulness.</p>
+        </div>
+    </div>
 </section>
 
 <section id="tratamientos">
     <h2>Tratamientos</h2>
-    <ul>
-        <li>Cambios alimentarios</li>
-        <li>Ejercicio supervisado</li>
-        <li>Terapia psicológica</li>
-        <li>Medicamentos</li>
-        <li>Cirugía bariátrica</li>
-    </ul>
+    <div class="card-container">
+        <div class="card">
+            <h3>Plan nutricional</h3>
+            <p>Dieta personalizada supervisada por nutricionista.</p>
+        </div>
+        <div class="card">
+            <h3>Ejercicio supervisado</h3>
+            <p>Rutinas diseñadas según condición física y objetivos.</p>
+        </div>
+        <div class="card">
+            <h3>Terapia psicológica</h3>
+            <p>Apoyo emocional y técnicas de control de ansiedad y estrés.</p>
+        </div>
+        <div class="card">
+            <h3>Tratamiento médico</h3>
+            <p>Medicamentos específicos bajo prescripción profesional.</p>
+        </div>
+        <div class="card">
+            <h3>Cirugía bariátrica</h3>
+            <p>Opción para casos severos bajo estricta supervisión médica.</p>
+        </div>
+    </div>
 </section>
 
 <section id="contacto">
     <h2>Contacto</h2>
+    <p>Si deseas comunicarte con nosotros, completa el formulario:</p>
     <form>
         <label>Nombre:</label>
         <input type="text" placeholder="Tu nombre" required>
-
         <label>Correo electrónico:</label>
         <input type="email" placeholder="Tu correo" required>
-
         <label>Mensaje:</label>
-        <textarea rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
-
+        <textarea rows="6" placeholder="Escribe tu mensaje..." required></textarea>
         <button type="submit">Enviar</button>
     </form>
 </section>
 
 <section id="privacidad">
     <h2>Política de Privacidad</h2>
-    <p>Esta página informa a los visitantes sobre nuestras políticas de datos.</p>
-</section>
-
-<section id="terminos">
-    <h2>Términos y Condiciones</h2>
-    <p>Al usar este sitio aceptas estos términos.</p>
-</section>
-
-<section id="legal">
-    <h2>Aviso Legal</h2>
-    <p>Este sitio ofrece información general sobre salud.</p>
+    <p>Esta web recopila datos solo cuando el usuario envía el formulario. No compartimos información con terceros y usamos cookies solo con fines estadísticos.</p>
 </section>
 
 <footer>
-    © 2025 Obesidad y Salud — Información para una vida más saludable
+    © 2025 Revista de Salud — Información confiable sobre obesidad y bienestar
 </footer>
 
 </body>
