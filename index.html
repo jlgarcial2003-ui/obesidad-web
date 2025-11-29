@@ -1,75 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revista de Salud - Obesidad y Bienestar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista de Salud - Obesidad y Bienestar</title>
 
-<!-- Google AdSense Script -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6633904994571539"
-crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { margin:0; font-family:'Roboto',sans-serif; background:#f9f9f9; color:#333; line-height:1.6; }
+        h1,h2,h3 { font-family:'Playfair Display',serif; }
+        a { text-decoration:none; color:inherit; }
+        #banner { position:relative; width:100%; height:400px; background:url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat; display:flex; align-items:center; justify-content:center; color:white; }
+        #banner div { text-align:center; background:rgba(0,0,0,0.4); padding:20px; border-radius:10px; }
+        #banner h1 { font-size:48px; margin-bottom:15px; }
+        #banner p { font-size:20px; margin-bottom:20px; }
+        #banner a { background:#66bb6a; padding:12px 25px; border-radius:8px; color:white; font-weight:bold; font-size:16px; transition:background 0.3s; }
+        #banner a:hover { background:#43a047; }
+        nav { position:sticky; top:0; background:#43a047; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:15px 0; z-index:100; }
+        nav a { color:white; font-weight:bold; padding:8px 15px; border-radius:5px; transition:background 0.3s; }
+        nav a:hover { background:#2e7d32; }
+        section { max-width:1000px; margin:40px auto; background:white; padding:30px; border-radius:12px; box-shadow:0 0 12px rgba(0,0,0,0.08); }
+        section img { width:100%; border-radius:12px; margin:20px 0; }
+        h2 { color:#2e7d32; margin-bottom:15px; }
+        .card-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:20px; }
+        .card { background:#e8f5e9; padding:20px; border-radius:10px; transition:transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+        .card:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.2); }
+        button { background:#66bb6a; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-size:16px; transition:background 0.3s; }
+        button:hover { background:#43a047; }
+        input,textarea { width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-size:16px; }
+        footer { background:#43a047; color:white; text-align:center; padding:20px; margin-top:40px; }
+        @media(max-width:600px){ nav{flex-direction:column;} #banner h1{font-size:32px;} #banner p{font-size:16px;} }
 
-<style>
-body { margin:0; font-family:'Roboto',sans-serif; background:#f9f9f9; color:#333; line-height:1.6; }
-h1,h2,h3 { font-family:'Playfair Display',serif; }
-a { text-decoration:none; color:inherit; }
-
-#banner { position:relative; width:100%; height:400px; background:url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat; display:flex; align-items:center; justify-content:center; color:white; }
-#banner div { text-align:center; background:rgba(0,0,0,0.4); padding:20px; border-radius:10px; }
-#banner h1 { font-size:48px; margin-bottom:15px; }
-#banner p { font-size:20px; margin-bottom:20px; }
-#banner a { background:#66bb6a; padding:12px 25px; border-radius:8px; color:white; font-weight:bold; font-size:16px; transition:background 0.3s; }
-#banner a:hover { background:#43a047; }
-
-nav { position:sticky; top:0; background:#43a047; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:15px 0; z-index:100; }
-nav a { color:white; font-weight:bold; padding:8px 15px; border-radius:5px; transition:background 0.3s; }
-nav a:hover { background:#2e7d32; }
-
-section { max-width:1000px; margin:40px auto; background:white; padding:30px; border-radius:12px; box-shadow:0 0 12px rgba(0,0,0,0.08); }
-section img { width:100%; border-radius:12px; margin:20px 0; }
-h2 { color:#2e7d32; margin-bottom:15px; }
-.card-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:20px; }
-.card { background:#e8f5e9; padding:20px; border-radius:10px; transition:transform 0.3s, box-shadow 0.3s; text-align:center; cursor:pointer; }
-.card:hover { transform:translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.2); }
-
-input,textarea { width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-size:16px; }
-button { background:#66bb6a; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-size:16px; transition:background 0.3s; }
-button:hover { background:#43a047; }
-
-footer { background:#43a047; color:white; text-align:center; padding:20px; margin-top:40px; }
-
-@media(max-width:600px){ nav{flex-direction:column;} #banner h1{font-size:32px;} #banner p{font-size:16px;} }
-
-/* MODAL */
-.modal { display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; }
-.modal-content { background:white; width:80%; max-width:700px; padding:30px; border-radius:12px; position:relative; animation: fadeIn 0.3s ease-in-out; }
-.close-btn { position:absolute; right:15px; top:10px; font-size:22px; cursor:pointer; font-weight:bold; }
-@keyframes fadeIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
-</style>
+        /* MODAL */
+        .modal { display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; }
+        .modal-content { background:white; width:90%; max-width:700px; padding:30px; border-radius:12px; position:relative; animation:fadeIn 0.3s ease-in-out; max-height:80%; overflow-y:auto; }
+        .close-btn { position:absolute; right:15px; top:10px; font-size:22px; cursor:pointer; font-weight:bold; }
+        @keyframes fadeIn { from { opacity:0; transform:scale(0.8); } to { opacity:1; transform:scale(1); } }
+    </style>
 </head>
 <body>
 
 <!-- Banner -->
 <section id="banner">
-<div>
-    <h1>Revista de Salud</h1>
-    <p>Todo sobre obesidad y bienestar</p>
-    <a href="#inicio">Descubre más</a>
-</div>
-
-<!-- AD 1: Banner superior -->
-<div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); width:728px; max-width:90%; text-align:center;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-6633904994571539"
-         data-ad-slot="1111111111"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+    <div>
+        <h1>Revista de Salud</h1>
+        <p>Todo sobre obesidad y bienestar, para una vida más saludable</p>
+        <a href="#inicio">Descubre más</a>
+    </div>
+    <!-- AD 1 -->
+    <div style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); width:728px; max-width:90%; text-align:center;">
+        <!-- COLOCA AQUÍ TU CÓDIGO ADSENSE -->
+    </div>
 </section>
 
 <!-- Navigation -->
@@ -80,142 +63,174 @@ footer { background:#43a047; color:white; text-align:center; padding:20px; margi
     <a href="#consecuencias">Consecuencias</a>
     <a href="#prevencion">Prevención</a>
     <a href="#tratamientos">Tratamientos</a>
-    <a href="#historias">Historia</a>
+    <a href="#historias">Historias de Éxito</a>
     <a href="#contacto">Contacto</a>
-    <a href="#privacidad">Política</a>
 </nav>
 
 <!-- Inicio -->
 <section id="inicio">
-<h2>Bienvenido a tu revista de salud</h2>
-<p>Encuentra información confiable sobre obesidad y bienestar.</p>
-<div class="card-container">
-    <div class="card" onclick="openModal('nutricion')"><h3>Consejos de Nutrición</h3><p>Aprende a equilibrar tus comidas</p></div>
-    <div class="card" onclick="openModal('investigacion')"><h3>Investigación Reciente</h3><p>Estudios y avances médicos</p></div>
-</div>
+    <h2>Bienvenido a tu revista de salud</h2>
+    <p>En este portal encontrarás información profunda y confiable sobre la obesidad y cómo mejorar tu bienestar físico y emocional.</p>
 </section>
 
 <!-- ¿Qué es la obesidad? -->
 <section id="quees">
-<h2>¿Qué es la obesidad?</h2>
-<div class="card-container">
-    <div class="card" onclick="openModal('definicion')"><h3>Definición</h3><p>Comprende la enfermedad</p></div>
-    <div class="card" onclick="openModal('tipos')"><h3>Tipos</h3><p>Diferentes formas de obesidad</p></div>
-</div>
+    <h2>¿Qué es la obesidad?</h2>
+    <div class="card-container">
+        <div class="card" onclick="openModal('quees')">
+            <h3>Definición y tipos</h3>
+            <p>Haz clic para aprender sobre los distintos tipos de obesidad y su impacto en la salud.</p>
+        </div>
+    </div>
 </section>
+
+<div id="modal-quees" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('quees')">&times;</span>
+        <h2>Definición y tipos de obesidad</h2>
+        <img src="https://images.unsplash.com/photo-1556228724-4d1e9db2c4b2?auto=format&fit=crop&w=1200&q=80" alt="Obesidad" style="width:100%; border-radius:10px; margin-bottom:20px;">
+        <p>La obesidad es una enfermedad crónica caracterizada por acumulación excesiva de grasa corporal que afecta la salud.</p>
+        <p>Tipos de obesidad:</p>
+        <ul>
+            <li><strong>Abdominal:</strong> grasa en abdomen, riesgo cardiovascular.</li>
+            <li><strong>Periférica:</strong> grasa en brazos y piernas.</li>
+            <li><strong>Generalizada:</strong> distribución en todo el cuerpo.</li>
+            <li><strong>Infantil:</strong> obesidad en niños y adolescentes.</li>
+        </ul>
+    </div>
+</div>
 
 <!-- Causas -->
 <section id="causas">
-<h2>Causas</h2>
-<div class="card-container">
-    <div class="card" onclick="openModal('alimentacion')"><h3>Alimentación</h3></div>
-    <div class="card" onclick="openModal('estilo')"><h3>Estilo de vida</h3></div>
-</div>
-<!-- AD 2 -->
-<div style="text-align:center; margin:30px 0;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-6633904994571539"
-         data-ad-slot="2222222222"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
+    <h2>Causas de la obesidad</h2>
+    <div class="card-container">
+        <div class="card" onclick="openModal('causas')">
+            <h3>Aprende las causas</h3>
+            <p>Haz clic para conocer las razones más frecuentes de la obesidad.</p>
+        </div>
+    </div>
 </section>
+
+<div id="modal-causas" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('causas')">&times;</span>
+        <h2>Causas de la obesidad</h2>
+        <img src="https://images.unsplash.com/photo-1588776814546-08f251f01950?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px; margin-bottom:20px;">
+        <p>Alimentación poco saludable, sedentarismo, factores genéticos y psicológicos contribuyen a la obesidad.</p>
+    </div>
+</div>
 
 <!-- Consecuencias -->
 <section id="consecuencias">
-<h2>Consecuencias</h2>
-<div class="card-container">
-    <div class="card" onclick="openModal('cardio')"><h3>Cardiovasculares</h3></div>
-    <div class="card" onclick="openModal('metabolicas')"><h3>Metabólicas</h3></div>
-</div>
+    <h2>Consecuencias para la salud</h2>
+    <div class="card-container">
+        <div class="card" onclick="openModal('consecuencias')">
+            <h3>Aprende las consecuencias</h3>
+            <p>Haz clic para descubrir cómo la obesidad puede afectar tu cuerpo.</p>
+        </div>
+    </div>
 </section>
+
+<div id="modal-consecuencias" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('consecuencias')">&times;</span>
+        <h2>Consecuencias de la obesidad</h2>
+        <img src="https://images.unsplash.com/photo-1612197525844-5a66e4f33ab0?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px; margin-bottom:20px;">
+        <p>La obesidad aumenta el riesgo de enfermedades cardiovasculares, metabólicas, respiratorias y articulares.</p>
+    </div>
+</div>
 
 <!-- Prevención -->
 <section id="prevencion">
-<h2>Prevención</h2>
-<div class="card-container">
-    <div class="card" onclick="openModal('alimentacion_saludable')"><h3>Alimentación saludable</h3></div>
-    <div class="card" onclick="openModal('ejercicio')"><h3>Ejercicio regular</h3></div>
-</div>
+    <h2>Prevención</h2>
+    <div class="card-container">
+        <div class="card" onclick="openModal('prevencion')">
+            <h3>Cómo prevenirla</h3>
+            <p>Haz clic para conocer estrategias efectivas para prevenir la obesidad.</p>
+        </div>
+    </div>
 </section>
+
+<div id="modal-prevencion" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('prevencion')">&times;</span>
+        <h2>Prevención de la obesidad</h2>
+        <img src="https://images.unsplash.com/photo-1554284126-17f0efb9477a?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px; margin-bottom:20px;">
+        <p>Alimentación saludable, ejercicio regular, control de hábitos y sueño adecuado son clave para prevenir la obesidad.</p>
+    </div>
+</div>
 
 <!-- Tratamientos -->
 <section id="tratamientos">
-<h2>Tratamientos</h2>
-<div class="card-container">
-    <div class="card" onclick="openModal('dieta')"><h3>Dieta personalizada</h3></div>
-    <div class="card" onclick="openModal('ejercicio_super')"><h3>Ejercicio supervisado</h3></div>
-    <div class="card" onclick="openModal('terapia')"><h3>Terapia psicológica</h3></div>
-</div>
+    <h2>Tratamientos</h2>
+    <div class="card-container">
+        <div class="card" onclick="openModal('tratamientos')">
+            <h3>Conoce los tratamientos</h3>
+            <p>Haz clic para saber cómo se trata la obesidad de forma efectiva.</p>
+        </div>
+    </div>
 </section>
 
-<!-- Historia de María -->
+<div id="modal-tratamientos" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('tratamientos')">&times;</span>
+        <h2>Tratamientos de la obesidad</h2>
+        <img src="https://images.unsplash.com/photo-1588776814546-08f251f01950?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px; margin-bottom:20px;">
+        <p>Incluyen dieta personalizada, ejercicio supervisado, terapia psicológica y, en casos severos, medicación o cirugía.</p>
+    </div>
+</div>
+
+<!-- Historias de éxito -->
 <section id="historias">
-<h2>Historia de Éxito</h2>
-<div class="card" onclick="openModal('historia1')">
-    <h3>María — Transformó su vida</h3>
-</div>
+    <h2>Historia de María</h2>
+    <div class="card-container">
+        <div class="card" onclick="openModal('historia1')">
+            <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?auto=format&fit=crop&w=1200&q=80" alt="María" style="border-radius:10px;">
+            <h3>María — Transformó su vida</h3>
+            <p>Haz clic para conocer su inspiradora historia de superación.</p>
+        </div>
+    </div>
 </section>
 
-<!-- MODALES -->
-<div id="modal-nutricion" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('nutricion')">&times;</span><h2>Consejos de Nutrición</h2><p>Equilibrar comidas, comer frutas, verduras y proteínas magras.</p></div></div>
-
-<div id="modal-investigacion" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('investigacion')">&times;</span><h2>Investigación Reciente</h2><p>Estudios sobre obesidad y avances médicos recientes.</p></div></div>
-
-<div id="modal-definicion" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('definicion')">&times;</span><h2>Definición</h2><p>La obesidad es la acumulación excesiva de grasa corporal...</p></div></div>
-
-<div id="modal-tipos" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('tipos')">&times;</span><h2>Tipos de Obesidad</h2><p>Abdominal, periférica, generalizada e infantil.</p></div></div>
-
-<div id="modal-alimentacion" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('alimentacion')">&times;</span><h2>Alimentación</h2><p>Exceso de calorías, ultraprocesados y bebidas azucaradas.</p></div></div>
-
-<div id="modal-estilo" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('estilo')">&times;</span><h2>Estilo de Vida</h2><p>Sedentarismo, hábitos urbanos y poco ejercicio.</p></div></div>
-
-<div id="modal-cardio" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('cardio')">&times;</span><h2>Cardiovasculares</h2><p>Hipertensión, infartos, problemas cardíacos...</p></div></div>
-
-<div id="modal-metabolicas" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('metabolicas')">&times;</span><h2>Metabólicas</h2><p>Diabetes tipo 2 y problemas hormonales.</p></div></div>
-
-<div id="modal-alimentacion_saludable" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('alimentacion_saludable')">&times;</span><h2>Alimentación Saludable</h2><p>Frutas, verduras, proteínas magras, evitar ultraprocesados.</p></div></div>
-
-<div id="modal-ejercicio" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('ejercicio')">&times;</span><h2>Ejercicio Regular</h2><p>150 minutos semanales como mínimo, combinando fuerza y cardio.</p></div></div>
-
-<div id="modal-dieta" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('dieta')">&times;</span><h2>Dieta Personalizada</h2><p>Plan supervisado por nutricionista según necesidades.</p></div></div>
-
-<div id="modal-ejercicio_super" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('ejercicio_super')">&times;</span><h2>Ejercicio Supervisado</h2><p>Rutinas adaptadas a cada persona, controladas por profesionales.</p></div></div>
-
-<div id="modal-terapia" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('terapia')">&times;</span><h2>Terapia Psicológica</h2><p>Apoyo emocional y control de hábitos para un cambio sostenible.</p></div></div>
-
-<div id="modal-historia1" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('historia1')">&times;</span><h2>Historia de María</h2><p>María tenía 34 años y logró perder 45 kg, mejorar su salud y autoestima.</p></div></div>
+<div id="modal-historia1" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('historia1')">&times;</span>
+        <h2>La Inspiradora Historia de María</h2>
+        <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px; margin-bottom:20px;">
+        <p>María tenía 34 años y un diagnóstico de obesidad severa. Con cambios progresivos en alimentación, actividad física y apoyo emocional, logró perder 45 kg y mejorar su salud.</p>
+        <p style="font-weight:bold; text-align:center; font-size:18px; margin-top:20px;">“No cambié por estar delgada… cambié porque quería vivir más y mejor con mi hijo.” — María</p>
+    </div>
+</div>
 
 <!-- Contacto -->
 <section id="contacto">
-<h2>Contacto</h2>
-<form>
-<label>Nombre:</label>
-<input type="text" placeholder="Tu nombre" required>
-<label>Correo electrónico:</label>
-<input type="email" placeholder="Tu correo" required>
-<label>Mensaje:</label>
-<textarea rows="6" placeholder="Escribe tu mensaje..." required></textarea>
-<button type="submit">Enviar</button>
-</form>
+    <h2>Contacto</h2>
+    <form>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Tu nombre" required>
+        <label>Correo electrónico:</label>
+        <input type="email" placeholder="Tu correo" required>
+        <label>Mensaje:</label>
+        <textarea rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
 </section>
 
-<!-- Política -->
-<section id="privacidad">
-<h2>Política de Privacidad</h2>
-<p>Recopilación de datos solo mediante formulario.</p>
-</section>
+<!-- AD 2 -->
+<div style="text-align:center; margin:30px 0;">
+    <!-- COLOCA AQUÍ TU CÓDIGO ADSENSE -->
+</div>
 
-<footer>© 2025 Revista de Salud — Información confiable sobre obesidad y bienestar</footer>
+<!-- Footer -->
+<footer>
+    © 2025 Revista de Salud — Información confiable sobre obesidad y bienestar
+</footer>
 
 <script>
-function openModal(id){document.getElementById("modal-"+id).style.display="flex";}
-function closeModal(id){document.getElementById("modal-"+id).style.display="none";}
+function openModal(id){ document.getElementById("modal-"+id).style.display="flex"; }
+function closeModal(id){ document.getElementById("modal-"+id).style.display="none"; }
 </script>
 
 </body>
 </html>
-
 
